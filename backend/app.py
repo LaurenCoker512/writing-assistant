@@ -28,7 +28,7 @@ def generate_story():
     data = request.json
     genre = data.get('genre')
     theme = data.get('theme')
-    weirdness = data.get('weirdness', 3)  # Default to middle value
+    weirdness = data.get('weirdness', 3)
     
     if not genre or not theme:
         return jsonify({"error": "Genre and theme required"}), 400
@@ -40,7 +40,6 @@ def generate_story():
 
         prompt = f"Create a one-paragraph story prompt with {genre} genre and {theme} theme."
 
-        # Add weirdness instruction to prompt
         if weirdness >= 4:
             prompt += " Make it unusual and experimental."
         elif weirdness <= 2:

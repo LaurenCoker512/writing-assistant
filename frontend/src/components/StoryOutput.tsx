@@ -22,7 +22,7 @@ function StoryOutput({ story, onRegenerate, disabled }: StoryOutputProps) {
     <div className="mt-6 p-4 bg-gray-50 rounded-md">
       <h2 className="text-lg font-medium mb-2">Your Story Prompt</h2>
       <div className="p-3 bg-white border border-gray-200 rounded-md mb-4">
-        <p className="text-gray-800">{story}</p>
+        <p className="text-left text-gray-800">{story}</p>
       </div>
 
       <div className="flex space-x-2">
